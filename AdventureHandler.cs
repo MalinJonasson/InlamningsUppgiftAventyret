@@ -50,7 +50,9 @@
                         run = Dragon.GoToDragon(Character);
                         break;
                     case "5":
-                        run = GoHome();
+                        Console.Clear();
+                        Console.WriteLine("You went home");
+                        run = false;
                         break;
 
                     default:
@@ -76,14 +78,6 @@
         {
             int choiceIndex = choice - 1;
             Locations[choiceIndex].CollectItem(Character.Items);    
-        }
-
-        private bool GoHome()
-        {
-            Console.Clear();
-            Console.WriteLine("You went home");
-            Console.ReadKey();
-            return false;
         }
     }
 }
